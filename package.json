@@ -1,0 +1,25 @@
+{
+  "name": "logitech-craft",
+  "version": "0.1.0",
+  "engines": {
+    "sketch": ">=3.0"
+  },
+  "skpm": {
+    "name": "logitech-craft",
+    "manifest": "src/manifest.json",
+    "main": "logitech-craft.sketchplugin",
+    "assets": [
+      "assets/**/*"
+    ]
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.5.11"
+  },
+  "author": "sprhawk <465558+sprhawk@users.noreply.github.com>"
+}
